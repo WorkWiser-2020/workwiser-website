@@ -141,21 +141,64 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 to FOUND-10 | Phase 1 | Pending |
-| HOME-01 to HOME-07 | Phase 2 | Pending |
-| ABOUT-01 to ABOUT-06 | Phase 3 | Pending |
-| WHY-01 to WHY-03 | Phase 3 | Pending |
-| CONT-01 to CONT-07 | Phase 4 | Pending |
-| CASE-01 to CASE-04 | Phase 5 | Pending |
-| CAREER-01 to CAREER-05 | Phase 5 | Pending |
-| SEO-01 to SEO-05 | Phase 6 | Pending |
-| LAUNCH-01 to LAUNCH-05 | Phase 7 | Pending |
+| FOUND-01 | Phase 1 — Project Scaffold | Pending |
+| FOUND-09 | Phase 1 — Project Scaffold | Pending |
+| FOUND-10 | Phase 1 — Project Scaffold | Pending |
+| FOUND-02 | Phase 2 — Brand System | Pending |
+| FOUND-03 | Phase 2 — Brand System | Pending |
+| FOUND-04 | Phase 2 — Brand System | Pending |
+| FOUND-05 | Phase 2 — Brand System | Pending |
+| FOUND-06 | Phase 2 — Brand System | Pending |
+| FOUND-07 | Phase 2 — Brand System | Pending |
+| FOUND-08 | Phase 2 — Brand System | Pending |
+| HOME-01 | Phase 3 — Home Page | Pending |
+| HOME-02 | Phase 3 — Home Page | Pending |
+| HOME-03 | Phase 3 — Home Page | Pending |
+| HOME-04 | Phase 3 — Home Page | Pending |
+| HOME-05 | Phase 3 — Home Page | Pending |
+| HOME-06 | Phase 3 — Home Page | Pending |
+| HOME-07 | Phase 3 — Home Page | Pending |
+| ABOUT-01 | Phase 4 — About Us + Why Us | Pending |
+| ABOUT-02 | Phase 4 — About Us + Why Us | Pending |
+| ABOUT-03 | Phase 4 — About Us + Why Us | Pending |
+| ABOUT-04 | Phase 4 — About Us + Why Us | Pending |
+| ABOUT-05 | Phase 4 — About Us + Why Us | Pending |
+| ABOUT-06 | Phase 4 — About Us + Why Us | Pending |
+| WHY-01 | Phase 4 — About Us + Why Us | Pending |
+| WHY-02 | Phase 4 — About Us + Why Us | Pending |
+| WHY-03 | Phase 4 — About Us + Why Us | Pending |
+| CONT-01 | Phase 5 — Contact Us | Pending |
+| CONT-02 | Phase 5 — Contact Us | Pending |
+| CONT-03 | Phase 5 — Contact Us | Pending |
+| CONT-04 | Phase 5 — Contact Us | Pending |
+| CONT-05 | Phase 5 — Contact Us | Pending |
+| CONT-06 | Phase 5 — Contact Us | Pending |
+| CONT-07 | Phase 5 — Contact Us | Pending |
+| CASE-01 | Phase 6 — Case Studies | Pending |
+| CASE-02 | Phase 6 — Case Studies | Pending |
+| CASE-03 | Phase 6 — Case Studies | Pending |
+| CASE-04 | Phase 6 — Case Studies | Pending |
+| CAREER-01 | Phase 7 — Careers | Pending |
+| CAREER-02 | Phase 7 — Careers | Pending |
+| CAREER-03 | Phase 7 — Careers | Pending |
+| CAREER-04 | Phase 7 — Careers | Pending |
+| CAREER-05 | Phase 7 — Careers | Pending |
+| SEO-01 | Phase 8 — SEO + Brand Polish | Pending |
+| SEO-02 | Phase 8 — SEO + Brand Polish | Pending |
+| SEO-03 | Phase 8 — SEO + Brand Polish | Pending |
+| SEO-04 | Phase 8 — SEO + Brand Polish | Pending |
+| SEO-05 | Phase 8 — SEO + Brand Polish | Pending |
+| LAUNCH-01 | Phase 9 — Launch | Pending |
+| LAUNCH-02 | Phase 9 — Launch | Pending |
+| LAUNCH-03 | Phase 9 — Launch | Pending |
+| LAUNCH-04 | Phase 9 — Launch | Pending |
+| LAUNCH-05 | Phase 9 — Launch | Pending |
 
 **Coverage:**
-- v1 requirements: 51 total
-- Mapped to phases: 51
-- Unmapped: 0 ✓
+- v1 requirements: 52 total
+- Mapped to phases: 52
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-19*
-*Last updated: 2026-03-19 after initial definition with brand guidelines and Canva design review*
+*Last updated: 2026-03-19 — traceability updated after roadmap creation (9-phase structure)*

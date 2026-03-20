@@ -3,12 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import StatsBar from '../components/StatsBar.astro';
 import ServicesGrid from '../components/ServicesGrid.astro';
+import ValueProps from '../components/ValueProps.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import Testimonials from '../components/Testimonials.astro';
 ---
 <BaseLayout
-  title="Home"
-  description="WorkWiser — Your Trusted Virtual Assistant Partners. Nearshore staffing solutions for US businesses."
+  title="WorkWiser - Your Trusted Virtual Assistant Partners"
+  description="WorkWiser connects US businesses with skilled nearshore virtual assistants. Simplified hiring, IRS compliance, and bilingual talent for Customer Support, Real Estate, Healthcare, and more."
 >
   <Hero />
   <StatsBar />
   <ServicesGrid />
+  <ValueProps />
+  <ProcessSteps />
+  <Testimonials />
 </BaseLayout>

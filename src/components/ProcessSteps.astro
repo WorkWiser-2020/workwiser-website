@@ -1,42 +1,63 @@
 ---
 // src/components/ProcessSteps.astro
 // 5-step process section — HOME-05
+// "one-stop solution" heading with 2-column numbered list, yellow circles (matching Canva mockup)
 import { processSteps } from '../data/homeContent.ts';
+
+const leftSteps = processSteps.filter(s => s.step <= 3);
+const rightSteps = processSteps.filter(s => s.step >= 4);
 ---
-<section class="bg-teal-light py-16 lg:py-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="bg-white py-16 lg:py-24 relative overflow-hidden">
+  <!-- Subtle dot grid texture -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, #003c64 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section heading -->
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
-        Our Simple Process
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-navy">
+        WorkWiser is a <span class="text-yellow" style="text-decoration: underline; text-decoration-color: #f3f145; text-underline-offset: 6px;">one-stop</span> solution
       </h2>
     </div>
 
-    <!-- Steps: horizontal on desktop, vertical stack on mobile -->
-    <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
-      {processSteps.map((step, index) => (
-        <div class="flex flex-col items-center text-center relative">
-          <!-- Connector line on desktop (all except last) -->
-          {index < processSteps.length - 1 && (
-            <div class="hidden md:block absolute top-6 left-1/2 w-full border-t-2 border-dashed border-teal/30" />
-          )}
-
-          <!-- Step number circle -->
-          <div class="relative z-10 w-12 h-12 rounded-full bg-teal text-white font-heading font-bold flex items-center justify-center text-lg flex-shrink-0">
-            {step.step}
+    <!-- 2-column layout: steps 1-3 left, steps 4-5 right -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 max-w-4xl mx-auto">
+      <!-- Left column: steps 1-3 -->
+      <div class="space-y-8">
+        {leftSteps.map(step => (
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-yellow text-navy font-heading font-bold flex items-center justify-center text-lg flex-shrink-0">
+              {step.step}
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-navy text-lg">
+                {step.title}
+              </h3>
+              <p class="mt-1 text-navy/60 text-sm leading-relaxed">
+                {step.description}
+              </p>
+            </div>
           </div>
+        ))}
+      </div>
 
-          <!-- Step content -->
-          <div class="mt-4 flex flex-col gap-2">
-            <h3 class="font-heading font-bold text-navy text-base">
-              {step.title}
-            </h3>
-            <p class="text-navy/70 text-sm leading-relaxed">
-              {step.description}
-            </p>
+      <!-- Right column: steps 4-5 -->
+      <div class="space-y-8">
+        {rightSteps.map(step => (
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-yellow text-navy font-heading font-bold flex items-center justify-center text-lg flex-shrink-0">
+              {step.step}
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-navy text-lg">
+                {step.title}
+              </h3>
+              <p class="mt-1 text-navy/60 text-sm leading-relaxed">
+                {step.description}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 </section>

@@ -1,20 +1,20 @@
 ---
 // src/components/StatsBar.astro
 // Stats bar with IntersectionObserver count-up animation — HOME-02
+// Light background with colored numbers (matching Canva mockup)
 import { stats } from '../data/homeContent.ts';
 ---
-<section class="bg-teal py-12">
+<section class="bg-white py-14">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
       {stats.map(stat => (
         <div>
-          <p class="text-3xl md:text-4xl font-heading font-bold text-white">
-            {/* Default text content is the fallback value shown when JS is disabled */}
+          <p class="text-4xl md:text-5xl font-heading font-bold text-teal">
             <span data-count={stat.value} data-suffix={stat.suffix}>
               {stat.value}{stat.suffix}
             </span>
           </p>
-          <p class="mt-1 text-white/80 text-sm font-medium">{stat.label}</p>
+          <p class="mt-2 text-navy/70 text-sm font-medium">{stat.label}</p>
         </div>
       ))}
     </div>
@@ -22,9 +22,6 @@ import { stats } from '../data/homeContent.ts';
 </section>
 
 <script>
-  // Count-up animation using IntersectionObserver (not scroll events).
-  // Each [data-count] element starts with the real number as its text content,
-  // so stats show correctly even if JavaScript is disabled or blocked.
   const counters = document.querySelectorAll<HTMLElement>('[data-count]');
 
   const observer = new IntersectionObserver((entries) => {
@@ -34,22 +31,21 @@ import { stats } from '../data/homeContent.ts';
       const el = entry.target as HTMLElement;
       const target = parseInt(el.dataset.count ?? '0', 10);
       const suffix = el.dataset.suffix ?? '';
-      const duration = 1500; // ms
+      const duration = 1500;
       const start = performance.now();
 
       function tick(now: number) {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
-        // Ease-out cubic: fast start, slow finish
         const eased = 1 - Math.pow(1 - progress, 3);
         el.textContent = Math.round(eased * target) + suffix;
         if (progress < 1) requestAnimationFrame(tick);
       }
 
       requestAnimationFrame(tick);
-      observer.unobserve(el); // Fire only once per element
+      observer.unobserve(el);
     });
-  }, { threshold: 0.3 }); // Trigger when 30% of element is visible
+  }, { threshold: 0.3 });
 
   counters.forEach(el => observer.observe(el));
 </script>

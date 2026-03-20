@@ -1,48 +1,61 @@
 ---
 // src/components/ValueProps.astro
 // Value propositions section — HOME-04
-import { valueProps } from '../data/homeContent.ts';
+// Simple 2-column bullet list + one-stop-solution sub-section (matching Canva mockup)
+import { valuePropItems } from '../data/homeContent.ts';
 ---
-<section class="bg-white py-16 lg:py-24">
+<section class="bg-teal-light py-16 lg:py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section heading -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
-        Grow your vision with talented virtual assistants
+    <!-- Top: heading + description + bullet list -->
+    <div class="max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold leading-tight" style="background: linear-gradient(135deg, #26aeb4, #0072c9, #003c64); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        Grow your vision with<br />talented virtual assistants
       </h2>
+
+      <p class="mt-4 text-navy/70 leading-relaxed">
+        Our VA's are hand-picked based on your unique requirements, and are supported by a team of professionals who onboard, train and supervise them on an ongoing basis.
+      </p>
+
+      <!-- 2-column bullet list -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3">
+        {valuePropItems.map(item => (
+          <div class="flex items-center gap-3">
+            <span class="text-navy font-bold">&#x2022;</span>
+            <span class="font-heading font-bold text-navy">{item}</span>
+          </div>
+        ))}
+      </div>
     </div>
 
-    <!-- 6-item grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {valueProps.map(prop => (
-        <div class="flex flex-col gap-4">
-          <!-- Icon -->
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-8 h-8 text-teal"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d={prop.iconPath} />
-            </svg>
-          </div>
-
-          <!-- Title -->
-          <h3 class="font-heading font-bold text-navy text-lg">
-            {prop.title}
-          </h3>
-
-          <!-- Description -->
-          <p class="text-navy/70 text-sm leading-relaxed">
-            {prop.description}
-          </p>
+    <!-- Bottom: one-stop solution sub-section with photo -->
+    <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="max-w-lg">
+        <h3 class="text-xl md:text-2xl font-heading font-bold text-navy">
+          WorkWiser is a one-stop solution
+        </h3>
+        <p class="mt-3 text-navy/70 leading-relaxed">
+          Where hiring, management, and retention seamlessly intertwine.
+        </p>
+        <div class="mt-6">
+          <a
+            href="https://calendly.com/workwiser-info/ceo-client"
+            class="inline-block bg-yellow text-navy font-heading font-bold px-6 py-3 rounded-full hover:bg-yellow/90 transition-colors text-sm"
+            target="_blank"
+            rel="noopener"
+          >
+            Start today
+          </a>
         </div>
-      ))}
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <img
+          src="/images/value-props.jpg"
+          alt="Virtual assistant working on laptop"
+          class="rounded-2xl max-w-sm w-full object-cover shadow-lg"
+          width="480"
+          height="360"
+        />
+      </div>
     </div>
   </div>
 </section>

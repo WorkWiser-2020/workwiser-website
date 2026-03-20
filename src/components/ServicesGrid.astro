@@ -1,0 +1,74 @@
+---
+// src/components/ServicesGrid.astro
+// Industries / Services grid — HOME-03
+import { services } from '../data/homeContent.ts';
+---
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
+        Industries We Serve
+      </h2>
+      <p class="mt-4 text-navy/70 max-w-2xl mx-auto">
+        Our virtual assistants bring role-specific expertise across the industries that need support the most.
+      </p>
+    </div>
+
+    <!-- 6-card grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map(service => (
+        <div class="rounded-xl p-6 bg-teal-light border border-teal/20">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8 text-teal"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d={service.iconPath} />
+            </svg>
+          </div>
+
+          <!-- Title -->
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">
+            {service.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-navy/70 text-sm leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom link -->
+    <div class="mt-10 text-center">
+      <!-- TODO: Change to /services when that page exists -->
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 text-blue font-heading font-bold hover:underline"
+      >
+        Explore all Roles
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-4 h-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+// src/components/Hero.astro
+// Hero section — HOME-01, HOME-07
+---
+<section class="relative min-h-[580px] lg:min-h-[680px] flex items-center overflow-hidden bg-navy">
+  <!-- Hero photo with low opacity so navy bg shows through, ensuring text contrast -->
+  <img
+    src="/images/hero.jpg"
+    alt="WorkWiser virtual assistant professional"
+    class="absolute inset-0 w-full h-full object-cover opacity-30"
+    width="1920"
+    height="1080"
+  />
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <p class="text-yellow font-heading font-bold text-sm uppercase tracking-widest mb-3">
+      More than a Virtual Assistant agency
+    </p>
+
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight max-w-2xl">
+      We are your Trusted Partners
+    </h1>
+
+    <p class="mt-6 text-lg text-white/80 max-w-xl leading-relaxed">
+      WorkWiser connects US businesses with skilled, bilingual nearshore virtual assistants —
+      pre-vetted, fully compliant, and ready to integrate with your team.
+      Stop spending time on tasks that shouldn't require your attention.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="https://calendly.com/workwiser-info/ceo-client"
+        class="bg-yellow text-navy font-heading font-bold px-7 py-3.5 rounded-md hover:bg-yellow/90 transition-colors"
+        target="_blank"
+        rel="noopener"
+      >
+        Start delegating
+      </a>
+    </div>
+  </div>
+</section>

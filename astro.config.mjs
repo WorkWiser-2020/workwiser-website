@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://workwiser.netlify.app",
+  site: "https://rococo-faun-f7353a.netlify.app",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],

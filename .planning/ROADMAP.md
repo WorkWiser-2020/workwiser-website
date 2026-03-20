@@ -64,11 +64,11 @@ Plans:
   3. Services/industries section shows cards for Customer Support, Real Estate, Healthcare, Tech Support, Sales, and Legal with an "Explore all Roles" link
   4. Value propositions section shows all six differentiators: Simplified Hiring, IRS Compliance, Full Contract Management, Customized Roles, Bilingual Talent, Flexible Payroll Options
   5. 5-step process section and testimonials section are both visible and populated with real WorkWiser content
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Build home page data files and section components (Hero, StatsBar, ServicesGrid)
-- [ ] 03-02: Build remaining home page sections (ValueProps, Process, Testimonials) and compose index.astro
+- [ ] 03-01-PLAN.md — Home page data layer + Hero, StatsBar, ServicesGrid components
+- [ ] 03-02-PLAN.md — ValueProps, ProcessSteps, Testimonials + compose index.astro
 
 ### Phase 4: About Us + Why Us Pages
 **Goal**: Visitors who want to learn more about WorkWiser and understand why to choose them can access two complete, brand-accurate pages with real content

@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Project Scaffold** - Astro 5 project with Tailwind v4 and Netlify deploy pipeline live at a preview URL (completed 2026-03-20)
 - [x] **Phase 2: Brand System** - Brand tokens, fonts, BaseLayout, Header, and Footer — shared by all pages (completed 2026-03-20)
-- [ ] **Phase 3: Home Page** - Full home page with all sections: hero, stats, services, value props, process, testimonials
+- [x] **Phase 3: Home Page** - Full home page with all sections: hero, stats, services, value props, process, testimonials (completed 2026-03-20)
 - [ ] **Phase 4: About Us + Why Us Pages** - Both Canva-designed pages built from brand guidelines and mockups
 - [ ] **Phase 5: Contact Us Page** - Contact form wired to email notification and Google Sheets via Netlify Forms + Zapier
 - [ ] **Phase 6: Case Studies Page** - Data-driven listing page built from caseStudies.ts following brand guidelines
@@ -175,7 +175,7 @@ Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independen
 |-------|----------------|--------|-----------|
 | 1. Project Scaffold | 1/1 | Complete   | 2026-03-20 |
 | 2. Brand System | 2/2 | Complete   | 2026-03-20 |
-| 3. Home Page | 1/2 | In Progress|  |
+| 3. Home Page | 2/2 | Complete   | 2026-03-20 |
 | 4. About Us + Why Us | 0/2 | Not started | - |
 | 5. Contact Us | 0/2 | Not started | - |
 | 6. Case Studies | 0/1 | Not started | - |

@@ -25,9 +25,9 @@
 - [x] **HOME-01**: Hero section — "More than a Virtual Assistant agency" (subtitle) + "We are your Trusted Partners" (H1) + body copy + "Start delegating" CTA button (yellow) + Calendly link
 - [x] **HOME-02**: Stats bar — 300+ Completed Projects, 100+ Satisfied Clients, 10+ Years Experience, 150 Team Members (correctly displaying numbers, not "0+")
 - [x] **HOME-03**: Industries/services section — cards for Customer Support, Real Estate, Healthcare, Tech Support, Sales, Legal with "Explore all Roles" link
-- [ ] **HOME-04**: Value propositions section — "Grow your vision with talented virtual assistants" featuring: Simplified Hiring, IRS Compliance, Full Contract Management, Customized Roles, Bilingual Talent, Flexible Payroll Options
-- [ ] **HOME-05**: 5-step process section — Understanding Your Needs → Pre-Qualified Candidates → Client Selection → Quick Onboarding → Boost Productivity
-- [ ] **HOME-06**: Testimonials section — "Real Results Delivered By WorkWiser VA's" with client/team testimonial cards
+- [x] **HOME-04**: Value propositions section — "Grow your vision with talented virtual assistants" featuring: Simplified Hiring, IRS Compliance, Full Contract Management, Customized Roles, Bilingual Talent, Flexible Payroll Options
+- [x] **HOME-05**: 5-step process section — Understanding Your Needs → Pre-Qualified Candidates → Client Selection → Quick Onboarding → Boost Productivity
+- [x] **HOME-06**: Testimonials section — "Real Results Delivered By WorkWiser VA's" with client/team testimonial cards
 - [x] **HOME-07**: Hero uses a real photo (not a broken or missing image) — photo of team member or VA professional
 
 ### About Us Page
@@ -154,9 +154,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HOME-01 | Phase 3 — Home Page | Complete |
 | HOME-02 | Phase 3 — Home Page | Complete |
 | HOME-03 | Phase 3 — Home Page | Complete |
-| HOME-04 | Phase 3 — Home Page | Pending |
-| HOME-05 | Phase 3 — Home Page | Pending |
-| HOME-06 | Phase 3 — Home Page | Pending |
+| HOME-04 | Phase 3 — Home Page | Complete |
+| HOME-05 | Phase 3 — Home Page | Complete |
+| HOME-06 | Phase 3 — Home Page | Complete |
 | HOME-07 | Phase 3 — Home Page | Complete |
 | ABOUT-01 | Phase 4 — About Us + Why Us | Pending |
 | ABOUT-02 | Phase 4 — About Us + Why Us | Pending |

@@ -1,0 +1,51 @@
+---
+// src/components/Testimonials.astro
+// Testimonials section — HOME-06
+import { testimonials } from '../data/homeContent.ts';
+---
+<section class="bg-white py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
+        Real Results Delivered By WorkWiser VA's
+      </h2>
+    </div>
+
+    <!-- 3-card grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {testimonials.map(testimonial => (
+        <figure class="bg-white rounded-xl shadow-sm border border-navy/10 p-6 flex flex-col gap-4">
+          <blockquote class="text-navy/80 text-sm leading-relaxed flex-1">
+            "{testimonial.quote}"
+          </blockquote>
+
+          <figcaption class="flex items-center gap-3">
+            <!-- Circular initials avatar -->
+            <div class="w-10 h-10 rounded-full bg-teal flex items-center justify-center text-white font-heading font-bold text-sm flex-shrink-0">
+              {testimonial.initials}
+            </div>
+            <!-- Name and title -->
+            <div>
+              <p class="font-heading font-bold text-navy text-sm">{testimonial.name}</p>
+              <p class="text-navy/60 text-xs">{testimonial.title}</p>
+            </div>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="mt-12 text-center">
+      <p class="text-navy/70 text-lg mb-6">Ready to get started?</p>
+      <a
+        href="https://calendly.com/workwiser-info/ceo-client"
+        target="_blank"
+        rel="noopener"
+        class="inline-block bg-yellow text-navy font-heading font-bold px-8 py-4 rounded-lg hover:brightness-95 transition-all"
+      >
+        Book a Free Consultation
+      </a>
+    </div>
+  </div>
+</section>

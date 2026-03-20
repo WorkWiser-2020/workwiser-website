@@ -1,0 +1,42 @@
+---
+// src/components/ProcessSteps.astro
+// 5-step process section — HOME-05
+import { processSteps } from '../data/homeContent.ts';
+---
+<section class="bg-teal-light py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
+        Our Simple Process
+      </h2>
+    </div>
+
+    <!-- Steps: horizontal on desktop, vertical stack on mobile -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
+      {processSteps.map((step, index) => (
+        <div class="flex flex-col items-center text-center relative">
+          <!-- Connector line on desktop (all except last) -->
+          {index < processSteps.length - 1 && (
+            <div class="hidden md:block absolute top-6 left-1/2 w-full border-t-2 border-dashed border-teal/30" />
+          )}
+
+          <!-- Step number circle -->
+          <div class="relative z-10 w-12 h-12 rounded-full bg-teal text-white font-heading font-bold flex items-center justify-center text-lg flex-shrink-0">
+            {step.step}
+          </div>
+
+          <!-- Step content -->
+          <div class="mt-4 flex flex-col gap-2">
+            <h3 class="font-heading font-bold text-navy text-base">
+              {step.title}
+            </h3>
+            <p class="text-navy/70 text-sm leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

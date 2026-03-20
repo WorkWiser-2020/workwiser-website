@@ -1,0 +1,48 @@
+---
+// src/components/ValueProps.astro
+// Value propositions section — HOME-04
+import { valueProps } from '../data/homeContent.ts';
+---
+<section class="bg-white py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
+        Grow your vision with talented virtual assistants
+      </h2>
+    </div>
+
+    <!-- 6-item grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {valueProps.map(prop => (
+        <div class="flex flex-col gap-4">
+          <!-- Icon -->
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8 text-teal"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d={prop.iconPath} />
+            </svg>
+          </div>
+
+          <!-- Title -->
+          <h3 class="font-heading font-bold text-navy text-lg">
+            {prop.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-navy/70 text-sm leading-relaxed">
+            {prop.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

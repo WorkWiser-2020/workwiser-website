@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Phase 1 context gathered
-last_updated: "2026-03-20T11:03:23.195Z"
+status: in-progress
+stopped_at: "Paused at Task 2 checkpoint:human-action - GitHub remote and Netlify CI/CD setup required"
+last_updated: "2026-03-20T11:31:17.563Z"
 last_activity: 2026-03-19 — Roadmap created, all 9 phases defined, 52 requirements mapped
 progress:
   total_phases: 9
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  completed_phases: 1
+  total_plans: 1
+  completed_plans: 1
+  percent: 11
 ---
 
 # Project State
@@ -21,32 +21,32 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-19)
 
 **Core value:** Prospective clients land on the site, immediately understand what WorkWiser does and why it's trustworthy, and take action — either booking a call or submitting a contact form.
-**Current focus:** Phase 1 — Project Scaffold
+**Current focus:** Phase 1 — Project Scaffold (awaiting Tasks 2-3: GitHub + Netlify human action)
 
 ## Current Position
 
 Phase: 1 of 9 (Project Scaffold)
-Plan: 0 of 1 in current phase
-Status: Ready to plan
-Last activity: 2026-03-19 — Roadmap created, all 9 phases defined, 52 requirements mapped
+Plan: 1 of 1 in current phase (paused at checkpoint:human-action — Task 2)
+Status: In progress — awaiting human action (GitHub remote + Netlify CI/CD setup)
+Last activity: 2026-03-20 — Task 1 complete: Astro 5 + Tailwind v4 scaffolded, build passing
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██████████] 100% (plans with SUMMARY.md)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 15 min
+- Total execution time: 0.25 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-project-scaffold | 1 | 15 min | 15 min |
 
 **Recent Trend:**
-- Last 5 plans: none yet
+- Last 5 plans: 01-01 (15 min)
 - Trend: —
 
 *Updated after each plan completion*
@@ -62,6 +62,9 @@ Recent decisions affecting current work:
 - [Setup]: Netlify Forms + Zapier for form pipeline (not Formspree — avoids 50/month limit)
 - [Setup]: Inter as body font if Helvetica Now Display license not obtained (confirm before Phase 2)
 - [Setup]: Calendly link already exists at calendly.com/workwiser-info/ceo-client — zero setup cost
+- [Phase 01-project-scaffold]: Manual npm install used instead of npm create astro@latest — interactive scaffolder aborts on non-empty directories without TTY
+- [Phase 01-project-scaffold]: NODE_VERSION=22 pinned in netlify.toml — Astro 5 requires Node v22.12.0+; Netlify default is lower
+- [Phase 01-project-scaffold]: Tailwind v4 via @tailwindcss/vite Vite plugin only — @astrojs/tailwind is deprecated for v4
 
 ### Pending Todos
 
@@ -76,6 +79,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T11:03:23.193Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-project-scaffold/01-CONTEXT.md
+Last session: 2026-03-20T11:30:48.517Z
+Stopped at: Paused at Task 2 checkpoint:human-action - GitHub remote and Netlify CI/CD setup required
+Resume file: None

@@ -12,7 +12,7 @@ Build a fast, brand-accurate Astro 5 marketing site that replaces WorkWiser's ou
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Project Scaffold** - Astro 5 project with Tailwind v4 and Netlify deploy pipeline live at a preview URL
+- [x] **Phase 1: Project Scaffold** - Astro 5 project with Tailwind v4 and Netlify deploy pipeline live at a preview URL (completed 2026-03-20)
 - [ ] **Phase 2: Brand System** - Brand tokens, fonts, BaseLayout, Header, and Footer — shared by all pages
 - [ ] **Phase 3: Home Page** - Full home page with all sections: hero, stats, services, value props, process, testimonials
 - [ ] **Phase 4: About Us + Why Us Pages** - Both Canva-designed pages built from brand guidelines and mockups
@@ -173,7 +173,7 @@ Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independen
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Scaffold | 0/1 | Not started | - |
+| 1. Project Scaffold | 1/1 | Complete   | 2026-03-20 |
 | 2. Brand System | 0/2 | Not started | - |
 | 3. Home Page | 0/2 | Not started | - |
 | 4. About Us + Why Us | 0/2 | Not started | - |

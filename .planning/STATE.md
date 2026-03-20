@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Phase 3 context gathered
-last_updated: "2026-03-20T15:11:29.182Z"
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-20T15:33:32.080Z"
 last_activity: "2026-03-20 — Phase 2 complete: Header, Footer, BaseLayout, brand tokens all confirmed working"
 progress:
   total_phases: 9
   completed_phases: 2
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 5
+  completed_plans: 4
   percent: 100
 ---
 
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 
 ## Current Position
 
-Phase: 2 of 9 complete (Brand System) — next: Phase 3 (Home Page)
-Plan: 2 of 2 in Phase 2 complete (all plans done)
-Status: Phase 2 fully complete — visual verification approved 2026-03-20
-Last activity: 2026-03-20 — Phase 2 complete: Header, Footer, BaseLayout, brand tokens all confirmed working
+Phase: 3 of 9 in progress (Home Page)
+Plan: 1 of 2 in Phase 3 complete — next: Plan 02 (ValueProps, ProcessSteps, Testimonials)
+Status: Phase 3 plan 01 complete — Hero, StatsBar, ServicesGrid built; homeContent.ts created
+Last activity: 2026-03-20 — Phase 3 plan 01: data layer + first 3 sections built (Hero, StatsBar, ServicesGrid)
 
-Progress: [██████████] 100% (plans with SUMMARY.md)
+Progress: [████████░░] 80% (plans with SUMMARY.md)
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Progress: [██████████] 100% (plans with SUMMARY.md)
 *Updated after each plan completion*
 | Phase 02-brand-system P01 | 10 | 2 tasks | 6 files |
 | Phase 02-brand-system P02 | 2 | 2 tasks | 3 files |
+| Phase 03-home-page P01 | 3 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,8 @@ Recent decisions affecting current work:
 - [Phase 02-brand-system]: rel=noopener (not noreferrer) on external CTAs — preserves referrer analytics while preventing opener access
 - [Phase 02-brand-system]: Footer uses md:grid-cols-3 CSS grid (not flexbox) — equal columns collapse cleanly to single stack on mobile
 - [Phase 02-brand-system]: .mobile-nav-link class on mobile nav anchors for targeted close-on-click without catching CTA links
+- [Phase 03-home-page]: Single yellow CTA in hero — conversion focus, no secondary button
+- [Phase 03-home-page]: IntersectionObserver count-up in StatsBar (not scroll events) — prevents 0+ bug from old WordPress site
 
 ### Pending Todos
 
@@ -80,12 +83,12 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Phase 3]: Hero photo must be a real person/team photo — confirm asset is available before Phase 3.
+- [Phase 3]: Hero photo resolved — Unsplash stock photo placed at public/images/hero.jpg; user replaces with real team photo before launch.
 - [Phase 5]: Confirm Netlify Forms free tier limits before wiring form pipeline (verify at netlify.com/pricing).
 - [Phase 6]: Case study content (client names, outcomes, narratives) must be ready before Phase 6 can be completed.
 
 ## Session Continuity
 
-Last session: 2026-03-20T15:11:29.180Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-home-page/03-CONTEXT.md
+Last session: 2026-03-20T15:33:32.078Z
+Stopped at: Completed 03-01-PLAN.md
+Resume file: None

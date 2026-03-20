@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-navy:       #003c64;
+  --color-blue:       #0072c9;
+  --color-teal:       #26aeb4;
+  --color-teal-light: #effefe;
+  --color-yellow:     #f3f145;
+
+  /* Font Families */
+  --font-heading: 'Open Sauce One', sans-serif;
+  --font-body:    'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-body text-navy;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}

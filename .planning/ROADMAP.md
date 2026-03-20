@@ -33,10 +33,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Pushing to git triggers a Netlify deploy that completes successfully
   3. The site is reachable at a `*.netlify.app` preview URL in a browser
   4. `/sitemap.xml` and `/robots.txt` are accessible at the preview URL
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: Scaffold Astro 5 project with Tailwind CSS v4 and configure Netlify deployment
+- [ ] 01-01-PLAN.md — Scaffold Astro 5 project with Tailwind CSS v4, sitemap, and Netlify CI/CD
 
 ### Phase 2: Brand System
 **Goal**: Every shared visual element (brand colors, fonts, header, footer, responsive layout) is live and consistent so every page inherits them without duplication

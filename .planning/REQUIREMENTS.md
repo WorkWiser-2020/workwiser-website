@@ -10,10 +10,10 @@
 ### Foundation & Setup
 
 - [ ] **FOUND-01**: Astro 5 project scaffolded with Tailwind CSS v4 and Netlify configuration
-- [ ] **FOUND-02**: Brand tokens implemented in CSS `@theme {}` block: colors (#003c64, #0072c9, #26aeb4, #effefe, #f3f145, #ffffff), gradients, fonts
-- [ ] **FOUND-03**: Open Sauce font loaded (header font — available via CDN/fontsource)
-- [ ] **FOUND-04**: Body font decision resolved: Helvetica Now Display (commercial license required) OR Inter (free, near-identical alternative)
-- [ ] **FOUND-05**: BaseLayout.astro created — shared header, footer, SEO meta, and page structure
+- [x] **FOUND-02**: Brand tokens implemented in CSS `@theme {}` block: colors (#003c64, #0072c9, #26aeb4, #effefe, #f3f145, #ffffff), gradients, fonts
+- [x] **FOUND-03**: Open Sauce font loaded (header font — available via CDN/fontsource)
+- [x] **FOUND-04**: Body font decision resolved: Helvetica Now Display (commercial license required) OR Inter (free, near-identical alternative)
+- [x] **FOUND-05**: BaseLayout.astro created — shared header, footer, SEO meta, and page structure
 - [ ] **FOUND-06**: Header/navigation implemented: Home, About Us, Why Us, Contact links + phone number (302) 257-5427 + "Get Started" CTA button, desktop nav (not hamburger-only)
 - [ ] **FOUND-07**: Footer implemented with logo, email (info@workwiser.io), phone, social links (LinkedIn, Facebook, Instagram)
 - [ ] **FOUND-08**: Mobile-responsive layout works on phone, tablet, and desktop
@@ -144,10 +144,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-01 | Phase 1 — Project Scaffold | Pending |
 | FOUND-09 | Phase 1 — Project Scaffold | Pending |
 | FOUND-10 | Phase 1 — Project Scaffold | Pending |
-| FOUND-02 | Phase 2 — Brand System | Pending |
-| FOUND-03 | Phase 2 — Brand System | Pending |
-| FOUND-04 | Phase 2 — Brand System | Pending |
-| FOUND-05 | Phase 2 — Brand System | Pending |
+| FOUND-02 | Phase 2 — Brand System | Complete |
+| FOUND-03 | Phase 2 — Brand System | Complete |
+| FOUND-04 | Phase 2 — Brand System | Complete |
+| FOUND-05 | Phase 2 — Brand System | Complete |
 | FOUND-06 | Phase 2 — Brand System | Pending |
 | FOUND-07 | Phase 2 — Brand System | Pending |
 | FOUND-08 | Phase 2 — Brand System | Pending |

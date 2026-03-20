@@ -14,9 +14,9 @@
 - [x] **FOUND-03**: Open Sauce font loaded (header font — available via CDN/fontsource)
 - [x] **FOUND-04**: Body font decision resolved: Helvetica Now Display (commercial license required) OR Inter (free, near-identical alternative)
 - [x] **FOUND-05**: BaseLayout.astro created — shared header, footer, SEO meta, and page structure
-- [ ] **FOUND-06**: Header/navigation implemented: Home, About Us, Why Us, Contact links + phone number (302) 257-5427 + "Get Started" CTA button, desktop nav (not hamburger-only)
-- [ ] **FOUND-07**: Footer implemented with logo, email (info@workwiser.io), phone, social links (LinkedIn, Facebook, Instagram)
-- [ ] **FOUND-08**: Mobile-responsive layout works on phone, tablet, and desktop
+- [x] **FOUND-06**: Header/navigation implemented: Home, About Us, Why Us, Contact links + phone number (302) 257-5427 + "Get Started" CTA button, desktop nav (not hamburger-only)
+- [x] **FOUND-07**: Footer implemented with logo, email (info@workwiser.io), phone, social links (LinkedIn, Facebook, Instagram)
+- [x] **FOUND-08**: Mobile-responsive layout works on phone, tablet, and desktop
 - [ ] **FOUND-09**: Netlify deploy pipeline live — site accessible at a Netlify preview URL before domain cutover
 - [ ] **FOUND-10**: Sitemap and robots.txt generated automatically by Astro
 
@@ -148,9 +148,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-03 | Phase 2 — Brand System | Complete |
 | FOUND-04 | Phase 2 — Brand System | Complete |
 | FOUND-05 | Phase 2 — Brand System | Complete |
-| FOUND-06 | Phase 2 — Brand System | Pending |
-| FOUND-07 | Phase 2 — Brand System | Pending |
-| FOUND-08 | Phase 2 — Brand System | Pending |
+| FOUND-06 | Phase 2 — Brand System | Complete |
+| FOUND-07 | Phase 2 — Brand System | Complete |
+| FOUND-08 | Phase 2 — Brand System | Complete |
 | HOME-01 | Phase 3 — Home Page | Pending |
 | HOME-02 | Phase 3 — Home Page | Pending |
 | HOME-03 | Phase 3 — Home Page | Pending |

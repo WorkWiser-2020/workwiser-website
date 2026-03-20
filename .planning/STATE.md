@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-20T14:06:30.646Z"
+stopped_at: "Checkpoint: 02-02 Task 3 human-verify — awaiting visual confirmation at localhost:4321"
+last_updated: "2026-03-20T14:11:37.132Z"
 last_activity: "2026-03-20 — Task 1 complete: Astro 5 + Tailwind v4 scaffolded, build passing"
 progress:
   total_phases: 9
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
   percent: 100
 ---
 
@@ -51,6 +51,7 @@ Progress: [██████████] 100% (plans with SUMMARY.md)
 
 *Updated after each plan completion*
 | Phase 02-brand-system P01 | 10 | 2 tasks | 6 files |
+| Phase 02-brand-system P02 | 2 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,9 @@ Recent decisions affecting current work:
 - [Phase 02-brand-system]: Astro 6 native fonts API resolves Open Sauce One via fontProviders.fontsource() — no npm fallback needed
 - [Phase 02-brand-system]: Solid navy header and footer — maximum contrast with white text; gradient deferred to hero sections
 - [Phase 02-brand-system]: Inter 400+500 confirmed as body font weights — Helvetica Now Display license blocker resolved
+- [Phase 02-brand-system]: rel=noopener (not noreferrer) on external CTAs — preserves referrer analytics while preventing opener access
+- [Phase 02-brand-system]: Footer uses md:grid-cols-3 CSS grid (not flexbox) — equal columns collapse cleanly to single stack on mobile
+- [Phase 02-brand-system]: .mobile-nav-link class on mobile nav anchors for targeted close-on-click without catching CTA links
 
 ### Pending Todos
 
@@ -83,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T14:06:30.644Z
-Stopped at: Completed 02-01-PLAN.md
+Last session: 2026-03-20T14:11:37.129Z
+Stopped at: Checkpoint: 02-02 Task 3 human-verify — awaiting visual confirmation at localhost:4321
 Resume file: None

@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: "Checkpoint 03-02 Task 3: visual verification awaiting user approval"
-last_updated: "2026-03-20T15:38:06.324Z"
+stopped_at: Completed 03-02-PLAN.md — Phase 3 Home Page complete
+last_updated: "2026-03-20T21:52:25.645Z"
 last_activity: "2026-03-20 — Phase 3 plan 01: data layer + first 3 sections built (Hero, StatsBar, ServicesGrid)"
 progress:
   total_phases: 9
@@ -54,6 +54,7 @@ Progress: [████████░░] 80% (plans with SUMMARY.md)
 | Phase 02-brand-system P02 | 2 | 2 tasks | 3 files |
 | Phase 03-home-page P01 | 3 | 2 tasks | 6 files |
 | Phase 03-home-page P02 | 2 | 2 tasks | 4 files |
+| Phase 03-home-page P02 | 45 | 3 tasks | 18 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,9 @@ Recent decisions affecting current work:
 - [Phase 03-home-page]: IntersectionObserver count-up in StatsBar (not scroll events) — prevents 0+ bug from old WordPress site
 - [Phase 03-home-page]: Testimonials use figure+blockquote+figcaption semantic markup for screen reader accessibility
 - [Phase 03-home-page]: Bottom Testimonials Calendly CTA added as optional conversion anchor at scroll end
+- [Phase 03-home-page]: Canva mockup rework post-checkpoint: all components redesigned to match provided Canva design after visual verification
+- [Phase 03-home-page]: CtaBanner added (not in plan): Canva design included a pricing conversion banner; added as key conversion anchor at scroll mid-point
+- [Phase 03-home-page]: SVG logo integrated into Header and Footer replacing text placeholder brand
 
 ### Pending Todos
 
@@ -92,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T15:38:06.321Z
-Stopped at: Checkpoint 03-02 Task 3: visual verification awaiting user approval
+Last session: 2026-03-20T21:52:25.643Z
+Stopped at: Completed 03-02-PLAN.md — Phase 3 Home Page complete
 Resume file: None

@@ -48,11 +48,11 @@ Plans:
   3. Header shows WorkWiser logo, navigation links (Home, About Us, Why Us, Contact), phone number, and "Get Started" CTA button — on desktop, not hamburger-only
   4. Footer shows logo, email, phone, and LinkedIn/Facebook/Instagram social links
   5. Layout is fully responsive: navigation and content adapt correctly on mobile, tablet, and desktop
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Implement brand tokens and font loading
-- [ ] 02-02: Build BaseLayout, Header, and Footer components
+- [ ] 02-01-PLAN.md — Brand tokens (@theme colors/fonts), Astro 6 font loading, BaseLayout with stub Header/Footer
+- [ ] 02-02-PLAN.md — Full Header (sticky, responsive nav, mobile slide-out), Footer (contact/social), index.astro wired to BaseLayout
 
 ### Phase 3: Home Page
 **Goal**: Prospective clients land on the home page and immediately understand what WorkWiser does, see credible social proof, and have a clear path to book a call or contact the team
@@ -169,7 +169,7 @@ Plans:
 **Execution Order:**
 Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9
 
-Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independent of each other. Phases 3–7 can be completed in any order after Phase 2.
+Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independent of each other. Phases 3-7 can be completed in any order after Phase 2.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|

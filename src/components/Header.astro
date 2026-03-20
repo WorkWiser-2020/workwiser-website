@@ -8,28 +8,27 @@ const navLinks = [
 ];
 ---
 
-<!-- Full header nav implemented in Plan 02 -->
-<header class="sticky top-0 z-50 bg-navy text-white">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+<header class="sticky top-0 z-50 bg-navy">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
 
     <!-- Logo (text placeholder — logo file not yet in public/) -->
     <a href="/" class="text-white font-heading font-bold text-xl tracking-tight">
       WorkWiser
     </a>
 
-    <!-- Desktop nav (hidden on mobile) -->
+    <!-- Desktop nav (hidden below md breakpoint) -->
     <nav class="hidden md:flex items-center gap-6">
       {navLinks.map(link => (
         <a href={link.href} class="text-white hover:text-yellow transition-colors text-sm font-medium">
           {link.label}
         </a>
       ))}
-      <span class="text-white/70 text-sm">(302) 257-5427</span>
+      <span class="text-white text-sm">(302) 257-5427</span>
       <a
         href="https://calendly.com/workwiser-info/ceo-client"
-        class="bg-yellow text-navy font-semibold px-4 py-2 rounded text-sm hover:bg-yellow/90 transition-colors"
+        class="bg-yellow text-navy font-heading font-bold px-5 py-2.5 rounded-md hover:bg-yellow/90 transition-colors"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
         Get Started
       </a>
@@ -61,7 +60,7 @@ const navLinks = [
   class="fixed inset-y-0 right-0 z-40 w-72 bg-navy transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"
   aria-hidden="true"
 >
-  <!-- Backdrop overlay -->
+  <!-- Backdrop overlay (sits behind the drawer, covers the page) -->
   <div
     id="mobile-overlay"
     class="fixed inset-0 bg-black/50 -z-10 opacity-0 transition-opacity duration-300 pointer-events-none"
@@ -69,17 +68,17 @@ const navLinks = [
 
   <nav class="flex flex-col gap-4 p-6 pt-20">
     {navLinks.map(link => (
-      <a href={link.href} class="text-white text-lg hover:text-yellow transition-colors">
+      <a href={link.href} class="text-white text-lg hover:text-yellow transition-colors mobile-nav-link">
         {link.label}
       </a>
     ))}
     <div class="border-t border-white/20 pt-4 mt-2">
-      <p class="text-white/70 text-sm mb-4">(302) 257-5427</p>
+      <p class="text-white text-sm mb-4">(302) 257-5427</p>
       <a
         href="https://calendly.com/workwiser-info/ceo-client"
-        class="block bg-yellow text-navy font-semibold px-4 py-3 rounded text-center hover:bg-yellow/90 transition-colors"
+        class="block bg-yellow text-navy font-heading font-bold px-5 py-3 rounded-md text-center hover:bg-yellow/90 transition-colors"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
         Get Started
       </a>
@@ -127,7 +126,7 @@ const navLinks = [
   overlay?.addEventListener('click', closeMenu);
 
   // Close when a mobile nav link is tapped
-  menu?.querySelectorAll('a').forEach(link => {
+  menu?.querySelectorAll('.mobile-nav-link').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 </script>

@@ -1,0 +1,149 @@
+// src/data/aboutContent.ts
+// Single source of truth for all About Us page content.
+// Update content here without touching component markup.
+
+// ---------------------------------------------------------------------------
+// Vision
+// ---------------------------------------------------------------------------
+
+export interface VisionMission {
+  heading: string;
+  text: string;
+  boldPhrases?: string[];
+}
+
+export const vision: VisionMission = {
+  heading: 'Our Vision',
+  text: 'To connect exceptional talent with extraordinary opportunities, empowering individuals and organizations to achieve their full potential.',
+};
+
+// ---------------------------------------------------------------------------
+// Mission
+// ---------------------------------------------------------------------------
+
+export const mission: VisionMission = {
+  heading: 'Our Mission',
+  text: 'To be the preferred recruitment partner, known for our outstanding service, unwavering commitment, and transformative solutions that create opportunities for businesses and talented professionals alike.',
+  boldPhrases: ['preferred recruitment partner', 'outstanding service', 'unwavering commitment', 'transformative solutions'],
+};
+
+// ---------------------------------------------------------------------------
+// Core Values
+// ---------------------------------------------------------------------------
+
+export interface CoreValue {
+  title: string;
+  description: string;
+  iconPath: string; // SVG `d` attribute string, 24x24 viewBox
+}
+
+export const coreValues: CoreValue[] = [
+  {
+    title: 'Integrity',
+    description:
+      'We operate with complete transparency and honesty in every interaction. Our clients and team members can trust that we will always do what we say and say what we mean. Integrity is the foundation on which every partnership we build rests.',
+    iconPath:
+      'M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z',
+  },
+  {
+    title: 'Excellence',
+    description:
+      'We hold ourselves to the highest professional standards in everything we do — from candidate screening to client communication. We continuously seek ways to improve our processes, our results, and the value we deliver to every stakeholder.',
+    iconPath:
+      'M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z',
+  },
+  {
+    title: 'Collaboration',
+    description:
+      'We believe the best outcomes emerge when we work together — with our clients, our candidates, and our internal team. We foster open communication and shared goals to build relationships that go beyond transactions and create lasting value.',
+    iconPath:
+      'M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z',
+  },
+  {
+    title: 'Innovation',
+    description:
+      'We embrace new ideas, tools, and approaches that help us serve clients better and faster. Whether it is refining our screening methodology or adopting better communication platforms, we never stop looking for smarter ways to deliver results.',
+    iconPath:
+      'M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18',
+  },
+  {
+    title: 'Dedication',
+    description:
+      'Every team member at WorkWiser is committed to going above and beyond for the clients and professionals we serve. Dedication means staying the course when challenges arise and consistently delivering on our promises, no matter the circumstances.',
+    iconPath:
+      'M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z',
+  },
+  {
+    title: 'Passion',
+    description:
+      'We genuinely care about the success of every client and candidate we work with. This passion drives us to invest real effort in understanding unique needs, crafting tailored solutions, and celebrating every win — big or small — alongside the people we serve.',
+    iconPath:
+      'M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z',
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Our Story
+// ---------------------------------------------------------------------------
+
+export interface OurStory {
+  heading: string;
+  paragraphs: string[];
+}
+
+export const ourStory: OurStory = {
+  heading: 'Our Story',
+  paragraphs: [
+    'WorkWiser was founded in September 2020 with a simple but powerful conviction: that talented professionals in Central America deserve world-class opportunities, and that North American businesses deserve access to the skilled, dedicated talent they need to grow. We started with a single virtual assistant and a commitment to doing things the right way — with transparency, care, and an unwavering focus on results.',
+    'In just a few years, that conviction has translated into a team of more than 150 professionals serving clients across a wide range of industries, including customer support, healthcare, real estate, sales, legal, and technology. Each placement represents a relationship built on trust — trust that our rigorous screening process identifies the right fit, and trust that we will stand behind every match we make.',
+    'At WorkWiser, we believe in creating a win-win environment where businesses thrive and professionals grow. We are not just filling roles — we are building careers, strengthening companies, and forging partnerships that last. Our story is still being written, and every client we serve and every professional we place adds a new chapter to it.',
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// Team Members
+// ---------------------------------------------------------------------------
+
+export interface TeamMember {
+  name: string;
+  title: string;
+  imageUrl: string;
+}
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: 'Alex Rivera',
+    title: 'Client Success Manager',
+    imageUrl: '/images/team/placeholder-1.jpg',
+  },
+  {
+    name: 'Maria Gonzalez',
+    title: 'Talent Acquisition Specialist',
+    imageUrl: '/images/team/placeholder-2.jpg',
+  },
+  {
+    name: 'Carlos Mendez',
+    title: 'Recruitment Coordinator',
+    imageUrl: '/images/team/placeholder-3.jpg',
+  },
+  {
+    name: 'Sofia Herrera',
+    title: 'Operations Lead',
+    imageUrl: '/images/team/placeholder-4.jpg',
+  },
+];
+
+// ---------------------------------------------------------------------------
+// Strategic Location
+// ---------------------------------------------------------------------------
+
+export interface StrategicLocation {
+  heading: string;
+  description: string;
+}
+
+export const strategicLocation: StrategicLocation = {
+  heading: 'Strategic Location',
+  description:
+    'Our talent pool is based in Central America — a region that shares time zones with North American business hours, meaning your virtual assistant is always available when you need them most. From EST to PST, our professionals work the same hours as your team, enabling real-time collaboration without the delays that come with offshore outsourcing.',
+};

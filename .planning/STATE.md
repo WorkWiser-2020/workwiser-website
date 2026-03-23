@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 4 context gathered
-last_updated: "2026-03-23T10:37:22.207Z"
+stopped_at: Completed 04-about-us-why-us-pages-01-PLAN.md
+last_updated: "2026-03-23T11:09:16.534Z"
 last_activity: "2026-03-20 — Phase 3 plan 01: data layer + first 3 sections built (Hero, StatsBar, ServicesGrid)"
 progress:
   total_phases: 9
   completed_phases: 3
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 7
+  completed_plans: 6
   percent: 80
 ---
 
@@ -55,6 +55,7 @@ Progress: [████████░░] 80% (plans with SUMMARY.md)
 | Phase 03-home-page P01 | 3 | 2 tasks | 6 files |
 | Phase 03-home-page P02 | 2 | 2 tasks | 4 files |
 | Phase 03-home-page P02 | 45 | 3 tasks | 18 files |
+| Phase 04-about-us-why-us-pages P01 | 7 | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,9 @@ Recent decisions affecting current work:
 - [Phase 03-home-page]: Canva mockup rework post-checkpoint: all components redesigned to match provided Canva design after visual verification
 - [Phase 03-home-page]: CtaBanner added (not in plan): Canva design included a pricing conversion banner; added as key conversion anchor at scroll mid-point
 - [Phase 03-home-page]: SVG logo integrated into Header and Footer replacing text placeholder brand
+- [Phase 04-about-us-why-us-pages]: Selected 6 core values (Integrity, Excellence, Collaboration, Innovation, Dedication, Passion) from combined Canva + requirements sets
+- [Phase 04-about-us-why-us-pages]: StrategicLocation is a shared component driven by aboutContent.ts; Why Us page reuses it with same data
+- [Phase 04-about-us-why-us-pages]: Yellow dots highlight Central America on dot-grid SVG map to visually anchor WorkWiser talent region
 
 ### Pending Todos
 
@@ -96,6 +100,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-23T10:37:22.204Z
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-about-us-why-us-pages/04-CONTEXT.md
+Last session: 2026-03-23T11:09:16.531Z
+Stopped at: Completed 04-about-us-why-us-pages-01-PLAN.md
+Resume file: None

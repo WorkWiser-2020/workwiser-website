@@ -1,0 +1,66 @@
+---
+// src/components/RecruitmentProcess.astro
+// Recruitment process section — split layout, dot pattern background, numbered steps
+// Data from whyUsContent.ts
+import { recruitmentSteps } from '../data/whyUsContent';
+---
+<section class="relative bg-gray-50 py-16 md:py-24 overflow-hidden">
+  <!-- Subtle dot-grid background pattern -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <svg class="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="dot-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <circle cx="3" cy="3" r="1.5" fill="#26aeb4" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#dot-grid)" />
+    </svg>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="md:grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: heading + numbered steps -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold leading-tight mb-8">
+          <span class="bg-gradient-to-r from-teal to-navy bg-clip-text text-transparent inline-block">
+            WorkWiser's top-notch recruitment process
+          </span>
+        </h2>
+
+        <ol class="space-y-4">
+          {recruitmentSteps.map((step, index) => (
+            <li class="flex items-start gap-4">
+              <!-- Numbered circle -->
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-navy text-white font-heading font-bold text-sm flex items-center justify-center">
+                {index + 1}
+              </span>
+              <!-- Step text -->
+              <span class="text-gray-700 text-base leading-relaxed pt-1">
+                {step}
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <!-- Right: stock photo with blue shape background -->
+      <div class="relative flex justify-center mt-12 md:mt-0">
+        <!-- Blue decorative shape behind the photo -->
+        <div class="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+          <div class="w-[85%] h-[90%] bg-blue rounded-2xl transform translate-x-4 translate-y-4"></div>
+        </div>
+        <!-- Photo -->
+        <img
+          src="/images/recruitment-professional.jpg"
+          alt="Professional virtual assistant ready to help your business"
+          class="relative z-10 w-full max-w-sm rounded-2xl object-cover shadow-lg"
+          width="400"
+          height="500"
+          onerror="this.style.display='none'"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

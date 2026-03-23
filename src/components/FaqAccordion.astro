@@ -1,0 +1,88 @@
+---
+// src/components/FaqAccordion.astro
+// Accessible FAQ accordion with vanilla JS toggle — WHY-01
+// Split layout: heading left, accordion right
+// Data from whyUsContent.ts
+import { faqs } from '../data/whyUsContent';
+---
+<section class="bg-white py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="md:grid md:grid-cols-[1fr_2fr] gap-12 items-start">
+
+      <!-- Left: heading -->
+      <div class="mb-10 md:mb-0 md:sticky md:top-24">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold leading-tight">
+          <span class="bg-gradient-to-r from-teal to-navy bg-clip-text text-transparent inline-block">
+            Frequently asked questions
+          </span>
+        </h2>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          Everything you need to know about working with WorkWiser's virtual professionals.
+        </p>
+      </div>
+
+      <!-- Right: accordion -->
+      <div class="divide-y divide-navy/10">
+        {faqs.map((faq, index) => (
+          <div class="py-4">
+            <button
+              class="faq-trigger w-full flex items-center justify-between text-left gap-4 py-2"
+              aria-expanded={index === 0 ? "true" : "false"}
+              data-index={index}
+            >
+              <span class="font-heading font-bold text-navy text-base md:text-lg">
+                {faq.question}
+              </span>
+              <!-- Chevron icon -->
+              <svg
+                class={`faq-chevron flex-shrink-0 w-5 h-5 text-teal transition-transform duration-200 ${index === 0 ? 'rotate-180' : ''}`}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <!-- Answer panel — first item starts open -->
+            <div class={`faq-answer overflow-hidden ${index === 0 ? '' : 'hidden'}`}>
+              <p class="py-3 text-gray-600 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Vanilla JS FAQ accordion toggle
+  // Pattern: querySelectorAll('.faq-trigger') → click handler toggles aria-expanded,
+  // toggles hidden on answer panel, toggles rotate-180 on chevron
+  document.querySelectorAll<HTMLButtonElement>('.faq-trigger').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Toggle aria-expanded
+      trigger.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+
+      // Toggle answer visibility — next sibling div is the faq-answer
+      const answer = trigger.nextElementSibling as HTMLElement | null;
+      if (answer) {
+        answer.classList.toggle('hidden');
+      }
+
+      // Toggle chevron rotation
+      const chevron = trigger.querySelector('.faq-chevron');
+      if (chevron) {
+        chevron.classList.toggle('rotate-180');
+      }
+    });
+  });
+</script>

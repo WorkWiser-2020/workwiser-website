@@ -1,0 +1,51 @@
+---
+// src/components/Differentiators.astro
+// Six differentiator cards in a 3x2 responsive grid — WHY-02
+// White background, navy icon containers, data from whyUsContent.ts
+import { differentiators } from '../data/whyUsContent';
+---
+<section class="bg-white py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
+        Why Choose WorkWiser
+      </h2>
+      <p class="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+        We go beyond standard recruitment — every placement is built around your unique business needs.
+      </p>
+    </div>
+
+    <!-- 3x2 grid of differentiator cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {differentiators.map((item) => (
+        <div class="flex flex-col p-6 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors">
+          <!-- Navy icon container -->
+          <div class="w-14 h-14 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 mb-4">
+            <svg
+              class="w-7 h-7 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d={item.iconPath} />
+            </svg>
+          </div>
+          <!-- Card content -->
+          <h3 class="text-lg font-heading font-bold text-navy mb-2">
+            {item.title}
+          </h3>
+          <p class="text-gray-600 leading-relaxed text-sm flex-grow">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

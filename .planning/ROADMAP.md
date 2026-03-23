@@ -96,11 +96,11 @@ Plans:
   3. Submitting the form sends an email notification to info@workwiser.io
   4. Submitting the form creates a new row in the designated Google Sheets tab via Zapier
   5. Calendly booking widget or link is visible and functional on the page
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: Build Contact Us page layout, hero, stats sidebar, and contact info
-- [ ] 05-02: Build and wire contact form to Netlify Forms + Zapier + Google Sheets pipeline
+- [ ] 05-01-PLAN.md — Data layer (contactContent.ts), BaseLayout head slot, ContactHero and ContactSidebar components
+- [ ] 05-02-PLAN.md — ContactForm with Netlify Forms AJAX submission, contact.astro page composition, Zapier setup guide
 
 ### Phase 6: Case Studies Page
 **Goal**: Prospective clients can view real, named client outcomes on a polished case studies page that builds trust and reinforces WorkWiser's credibility

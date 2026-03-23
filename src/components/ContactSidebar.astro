@@ -1,0 +1,103 @@
+---
+// src/components/ContactSidebar.astro
+// Contact sidebar — CONT-05, CONT-06, CONT-07
+// Vertical stats + contact info + Calendly booking card
+import { contactStats, contactInfo } from '../data/contactContent.ts';
+---
+<aside class="flex flex-col gap-8">
+
+  <!-- Section A: Stats (CONT-05) -->
+  <div class="bg-white rounded-2xl shadow-sm border border-navy/8 p-6">
+    <h2 class="text-xs font-heading font-bold text-navy/40 uppercase tracking-widest mb-6">By the Numbers</h2>
+    <div class="space-y-6">
+      {contactStats.map(stat => (
+        <div>
+          <p class="text-3xl font-heading font-bold text-teal">
+            <span data-count={stat.value} data-suffix={stat.suffix}>
+              {stat.value}{stat.suffix}
+            </span>
+          </p>
+          <p class="mt-1 text-navy/70 text-sm font-medium">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Section B: Contact Info (CONT-07) -->
+  <div class="bg-white rounded-2xl shadow-sm border border-navy/8 p-6">
+    <h2 class="text-xs font-heading font-bold text-navy/40 uppercase tracking-widest mb-4">Get in Touch</h2>
+    <div class="flex flex-col gap-4">
+      <!-- Phone -->
+      <a
+        href="tel:+13022575427"
+        class="flex items-center gap-3 text-navy hover:text-teal transition-colors group"
+      >
+        <span class="shrink-0 w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center group-hover:bg-teal/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+          </svg>
+        </span>
+        <span class="font-medium">{contactInfo.phone}</span>
+      </a>
+      <!-- Email -->
+      <a
+        href="mailto:info@workwiser.io"
+        class="flex items-center gap-3 text-navy hover:text-teal transition-colors group"
+      >
+        <span class="shrink-0 w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center group-hover:bg-teal/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+          </svg>
+        </span>
+        <span class="font-medium">{contactInfo.email}</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Section C: Calendly Booking Card (CONT-06) -->
+  <div class="bg-teal/5 border border-teal/20 rounded-2xl p-6">
+    <h2 class="text-lg font-heading font-bold text-navy leading-snug mb-2">
+      Book a Free Consultation
+    </h2>
+    <p class="text-navy/70 text-sm mb-5 leading-relaxed">
+      Schedule a 30-minute call with our team
+    </p>
+    <button
+      type="button"
+      onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/workwiser-info/ceo-client' }); return false;"
+      class="inline-block bg-yellow text-navy font-heading font-bold px-6 py-3 rounded-full hover:bg-yellow/90 transition-colors w-full text-center"
+    >
+      Book a Free Consultation
+    </button>
+  </div>
+
+</aside>
+
+<script>
+  const counters = document.querySelectorAll<HTMLElement>('[data-count]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const el = entry.target as HTMLElement;
+      const target = parseInt(el.dataset.count ?? '0', 10);
+      const suffix = el.dataset.suffix ?? '';
+      const duration = 1500;
+      const start = performance.now();
+
+      function tick(now: number) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.3 });
+
+  counters.forEach(el => observer.observe(el));
+</script>

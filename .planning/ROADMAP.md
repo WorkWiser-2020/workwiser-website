@@ -80,11 +80,11 @@ Plans:
   3. Team section is present (populated with real photos if available, placeholder structure if not)
   4. Why Us page displays the six differentiators with icons and descriptions, matching brand styling
   5. Why Us page includes a working "Start today" CTA that links to the contact page or Calendly
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: Build About Us page following Canva mockup and brand guidelines
-- [ ] 04-02: Build Why Us page following Canva mockup and brand guidelines
+- [ ] 04-01-PLAN.md — Data files (aboutContent.ts + whyUsContent.ts), About Us page components (Hero, Vision/Mission, Core Values, Our Story, Team, Strategic Location), and about.astro page
+- [ ] 04-02-PLAN.md — Why Us page components (Hero, Differentiators, Recruitment Process, FAQ Accordion) and why-us.astro page
 
 ### Phase 5: Contact Us Page
 **Goal**: Prospective clients can submit a contact inquiry that reliably reaches the WorkWiser team via email notification and is recorded in Google Sheets, and can also book a call directly via Calendly

@@ -41,15 +41,15 @@
 
 ### Why Us Page
 
-- [ ] **WHY-01**: Hero — "WorkWiser is your best option" with brand styling
-- [ ] **WHY-02**: Six differentiators with icons and descriptions:
+- [x] **WHY-01**: Hero — "WorkWiser is your best option" with brand styling
+- [x] **WHY-02**: Six differentiators with icons and descriptions:
   - Tailored Approach — personalized client matching, not one-size-fits-all
   - Extensive Expertise — experienced recruiters across multiple industries
   - Thorough Screening Process — interviews, references, skill assessments
   - Confidentiality and Privacy — sensitive information always secured
   - Continuous Support — ongoing support after candidate placement
   - Time and Cost Efficiency — significantly reduced time to fill positions
-- [ ] **WHY-03**: CTA section — "Start today" button linking to contact or Calendly
+- [x] **WHY-03**: CTA section — "Start today" button linking to contact or Calendly
 
 ### Contact Us Page
 
@@ -164,9 +164,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ABOUT-04 | Phase 4 — About Us + Why Us | Complete |
 | ABOUT-05 | Phase 4 — About Us + Why Us | Complete |
 | ABOUT-06 | Phase 4 — About Us + Why Us | Complete |
-| WHY-01 | Phase 4 — About Us + Why Us | Pending |
-| WHY-02 | Phase 4 — About Us + Why Us | Pending |
-| WHY-03 | Phase 4 — About Us + Why Us | Pending |
+| WHY-01 | Phase 4 — About Us + Why Us | Complete |
+| WHY-02 | Phase 4 — About Us + Why Us | Complete |
+| WHY-03 | Phase 4 — About Us + Why Us | Complete |
 | CONT-01 | Phase 5 — Contact Us | Pending |
 | CONT-02 | Phase 5 — Contact Us | Pending |
 | CONT-03 | Phase 5 — Contact Us | Pending |

@@ -1,0 +1,238 @@
+---
+// src/components/ContactForm.astro
+// Contact form with Netlify Forms AJAX submission, inline validation, fade-to-success — CONT-02, CONT-03
+import { formFields } from '../data/contactContent.ts';
+
+// Group half-width fields into pairs for 2-column grid rendering
+type FormField = typeof formFields[number];
+const rows: Array<FormField | FormField[]> = [];
+let halfPair: FormField[] = [];
+for (const field of formFields) {
+  if (field.half) {
+    halfPair.push(field);
+    if (halfPair.length === 2) {
+      rows.push([...halfPair]);
+      halfPair = [];
+    }
+  } else {
+    if (halfPair.length > 0) {
+      rows.push([...halfPair]);
+      halfPair = [];
+    }
+    rows.push(field);
+  }
+}
+if (halfPair.length > 0) rows.push([...halfPair]);
+---
+
+<div id="form-wrapper">
+
+  <form
+    id="contact-form"
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    novalidate
+    class="flex flex-col gap-5"
+  >
+    <!-- Required hidden field for Netlify AJAX submission -->
+    <input type="hidden" name="form-name" value="contact" />
+
+    <!-- Honeypot spam protection -->
+    <p class="hidden" aria-hidden="true">
+      <label>Leave blank: <input name="bot-field" /></label>
+    </p>
+
+    <!-- Dynamic field rendering -->
+    {rows.map(row => {
+      if (Array.isArray(row)) {
+        // Two-column half-width grid
+        return (
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {row.map(field => (
+              <div class="flex flex-col gap-1">
+                <label for={field.id} class="text-sm font-medium text-navy/80">
+                  {field.label}
+                  {field.required && <span class="text-red-500 ml-0.5">*</span>}
+                </label>
+                <input
+                  type={field.type}
+                  id={field.id}
+                  name={field.id}
+                  required={field.required || undefined}
+                  class="w-full px-4 py-3 border border-navy/20 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow text-navy placeholder-navy/30"
+                />
+                {field.required && (
+                  <p class="field-error hidden text-sm text-red-600 mt-1" data-for={field.id}></p>
+                )}
+              </div>
+            ))}
+          </div>
+        );
+      } else {
+        // Full-width field (textarea or single field)
+        const field = row as FormField;
+        return (
+          <div class="flex flex-col gap-1">
+            <label for={field.id} class="text-sm font-medium text-navy/80">
+              {field.label}
+              {field.required && <span class="text-red-500 ml-0.5">*</span>}
+            </label>
+            {field.type === 'textarea' ? (
+              <textarea
+                id={field.id}
+                name={field.id}
+                rows={5}
+                required={field.required || undefined}
+                class="w-full px-4 py-3 border border-navy/20 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow text-navy placeholder-navy/30 resize-y"
+              ></textarea>
+            ) : (
+              <input
+                type={field.type}
+                id={field.id}
+                name={field.id}
+                required={field.required || undefined}
+                class="w-full px-4 py-3 border border-navy/20 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow text-navy placeholder-navy/30"
+              />
+            )}
+            {field.required && (
+              <p class="field-error hidden text-sm text-red-600 mt-1" data-for={field.id}></p>
+            )}
+          </div>
+        );
+      }
+    })}
+
+    <!-- Submit button -->
+    <div class="pt-2">
+      <button
+        type="submit"
+        id="submit-btn"
+        class="bg-yellow text-navy font-heading font-bold px-8 py-3.5 rounded-full hover:bg-yellow/90 transition-colors"
+      >
+        Send Message
+      </button>
+    </div>
+
+    <!-- Generic error message (shown on network failure) -->
+    <p id="submit-error" class="hidden text-sm text-red-600 mt-1">
+      Something went wrong. Please try again or email us directly at info@workwiser.io.
+    </p>
+  </form>
+
+  <!-- Success message (replaces form after successful submission) -->
+  <div id="success-msg" class="hidden text-center py-12">
+    <p class="text-xl font-heading font-bold text-navy">Thanks! We'll be in touch within 24 hours.</p>
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+  const successMsg = document.getElementById('success-msg') as HTMLElement | null;
+  const submitError = document.getElementById('submit-error') as HTMLElement | null;
+
+  if (!form || !submitBtn || !successMsg) {
+    // Safety guard — should never happen in normal page load
+    console.error('ContactForm: required elements not found');
+  } else {
+
+    // ---------------------------------------------------------------------------
+    // Inline validation helpers
+    // ---------------------------------------------------------------------------
+
+    function getErrorEl(fieldId: string): HTMLElement | null {
+      return form!.querySelector<HTMLElement>(`[data-for="${fieldId}"]`);
+    }
+
+    function showError(fieldId: string, message: string): void {
+      const errorEl = getErrorEl(fieldId);
+      if (errorEl) {
+        errorEl.textContent = message;
+        errorEl.classList.remove('hidden');
+      }
+    }
+
+    function clearError(fieldId: string): void {
+      const errorEl = getErrorEl(fieldId);
+      if (errorEl) {
+        errorEl.textContent = '';
+        errorEl.classList.add('hidden');
+      }
+    }
+
+    function validateField(input: HTMLInputElement | HTMLTextAreaElement): boolean {
+      const id = input.id;
+      if (input.validity.valueMissing) {
+        showError(id, 'This field is required.');
+        return false;
+      }
+      if (input instanceof HTMLInputElement && input.validity.typeMismatch) {
+        showError(id, 'Please enter a valid email address.');
+        return false;
+      }
+      clearError(id);
+      return true;
+    }
+
+    function validateForm(): boolean {
+      const requiredFields = form!.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[required]');
+      let valid = true;
+      requiredFields.forEach(field => {
+        if (!validateField(field)) valid = false;
+      });
+      return valid;
+    }
+
+    // ---------------------------------------------------------------------------
+    // Blur-time validation on required fields
+    // ---------------------------------------------------------------------------
+
+    const requiredInputs = form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[required]');
+    requiredInputs.forEach(input => {
+      input.addEventListener('blur', () => validateField(input));
+    });
+
+    // ---------------------------------------------------------------------------
+    // Form submit handler — AJAX to Netlify Forms
+    // ---------------------------------------------------------------------------
+
+    form.addEventListener('submit', async (e: Event) => {
+      e.preventDefault();
+
+      if (!validateForm()) return;
+
+      // Disable button and show sending state
+      submitBtn!.disabled = true;
+      submitBtn!.textContent = 'Sending...';
+      if (submitError) submitError.classList.add('hidden');
+
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString(),
+        });
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        // Fade form out, then swap in success message
+        form.style.transition = 'opacity 400ms ease';
+        form.style.opacity = '0';
+        setTimeout(() => {
+          form.classList.add('hidden');
+          successMsg!.classList.remove('hidden');
+        }, 420);
+
+      } catch {
+        // Network or server error — re-enable form
+        submitBtn!.disabled = false;
+        submitBtn!.textContent = 'Send Message';
+        if (submitError) submitError.classList.remove('hidden');
+      }
+    });
+
+  }
+</script>

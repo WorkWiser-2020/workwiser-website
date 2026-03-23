@@ -1,0 +1,48 @@
+---
+// src/components/VisionMission.astro
+// Vision & Mission section — ABOUT-02, ABOUT-03, ABOUT-04
+// Light teal background, two rows with heading + card layout
+import { vision, mission } from '../data/aboutContent';
+
+function boldify(text: string, phrases: string[]): string {
+  let result = text;
+  for (const phrase of phrases) {
+    result = result.replace(phrase, `<strong>${phrase}</strong>`);
+  }
+  return result;
+}
+---
+<section class="bg-teal-light py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+    <!-- Vision row -->
+    <div class="md:grid md:grid-cols-2 gap-8 items-center">
+      <div class="mb-4 md:mb-0">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
+          {vision.heading}
+        </h2>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-sm">
+        <p class="text-navy/80 leading-relaxed text-lg">
+          {vision.text}
+        </p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-teal/20" />
+
+    <!-- Mission row -->
+    <div class="md:grid md:grid-cols-2 gap-8 items-center">
+      <div class="mb-4 md:mb-0">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-navy">
+          {mission.heading}
+        </h2>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-sm">
+        <p class="text-navy/80 leading-relaxed text-lg" set:html={boldify(mission.text, mission.boldPhrases ?? [])} />
+      </div>
+    </div>
+
+  </div>
+</section>

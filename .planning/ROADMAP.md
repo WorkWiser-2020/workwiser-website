@@ -142,11 +142,11 @@ Plans:
   3. The WorkWiser favicon (W submark) displays in browser tabs on all pages
   4. Logo appears as the color wordmark on light backgrounds and white version on dark/blue backgrounds across all pages
   5. Yellow accents, dot grid patterns, gradient panels, and arrow icons are applied consistently and match the Canva mockups
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 08-01: Implement SEO meta tags, Open Graph, and favicon across all pages
-- [ ] 08-02: Brand consistency audit — review all pages against Canva mockups and brand guidelines
+- [ ] 08-01-PLAN.md — Open Graph tags, Twitter Card meta, canonical links in BaseLayout + real W-arrow favicon
+- [ ] 08-02-PLAN.md — Brand consistency audit: logo usage (SEO-03), yellow accents, gradients, dot grids, W-arrow watermarks (SEO-04)
 
 ### Phase 9: Launch
 **Goal**: The new WorkWiser site is live at workwiser.io with SSL active, DNS cutover completed safely with the WordPress site intact as a fallback

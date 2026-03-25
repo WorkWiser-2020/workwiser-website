@@ -1,0 +1,23 @@
+---
+// src/components/CaseStudiesCta.astro
+// Bottom CTA section for the case studies page — navy gradient linking to /contact.
+// Does NOT reuse CtaBanner (which is hardcoded with photo, pricing, and Calendly).
+---
+<section class="bg-gradient-to-br from-navy via-navy to-blue py-16 md:py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-heading font-bold text-white">
+      Ready to get started?
+    </h2>
+    <p class="mt-4 text-white/80 text-lg md:text-xl leading-relaxed">
+      Tell us about your business and let's find the right virtual assistant for your team.
+    </p>
+    <div class="mt-8">
+      <a
+        href="/contact"
+        class="inline-block bg-yellow text-navy font-heading font-bold px-7 py-3.5 rounded-full hover:bg-yellow/90 transition-colors"
+      >
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>

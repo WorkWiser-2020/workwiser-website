@@ -1,0 +1,33 @@
+---
+// src/pages/careers.astro
+// Careers landing page for prospective agents and VAs — CAREER-01, CAREER-02, CAREER-05
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CareersHero from '../components/CareersHero.astro';
+import CareersForm from '../components/CareersForm.astro';
+import { careersBenefits } from '../data/careersContent.ts';
+---
+
+<BaseLayout title="Careers | WorkWiser" description="Join the WorkWiser team as a virtual professional. Apply now for remote roles in Customer Support, Healthcare, Real Estate, and more.">
+  <CareersHero />
+
+  <!-- Benefits section (3 items from careersBenefits) -->
+  <section class="bg-slate-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-heading font-bold text-2xl text-navy mb-6">Why Work With WorkWiser?</h2>
+      <ul class="flex flex-col sm:flex-row gap-6 justify-center">
+        {careersBenefits.map(benefit => (
+          <li class="flex-1 bg-white rounded-xl p-5 shadow-sm text-navy/80 text-sm">{benefit}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Application form -->
+  <section id="careers-form" class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading font-bold text-3xl text-navy mb-2">Apply Now</h2>
+      <p class="text-navy/60 mb-8">Fields marked <span class="text-red-500">*</span> are required.</p>
+      <CareersForm />
+    </div>
+  </section>
+</BaseLayout>

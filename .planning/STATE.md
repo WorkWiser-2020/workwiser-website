@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 7 plan 01 complete — checkpoint:human-verify pending
-last_updated: "2026-03-25T10:26:02Z"
-last_activity: "2026-03-25 — Phase 7 plan 01: careersContent.ts, CareersHero, CareersForm (Netlify Forms name=careers), careers.astro, Footer link"
+stopped_at: Phase 7 plan 02 complete — CAREERS-ZAPIER-SETUP-GUIDE.md created
+last_updated: "2026-03-25T10:32:00Z"
+last_activity: "2026-03-25 — Phase 7 plan 02: CAREERS-ZAPIER-SETUP-GUIDE.md (Netlify email + Zapier Zap setup for careers form pipeline)"
 progress:
   total_phases: 9
   completed_phases: 6
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 
 ## Current Position
 
-Phase: 7 in progress (Careers Page)
-Plan: 1 of 2 in Phase 7 complete — awaiting checkpoint:human-verify
-Status: Phase 7 plan 01 complete — /careers page, CareersHero, CareersForm (Netlify Forms name=careers), careersContent.ts built; awaiting user visual verification
-Last activity: 2026-03-25 — Phase 7 plan 01: careersContent.ts, CareersHero, CareersForm (Netlify Forms name=careers), careers.astro, Footer link
+Phase: 7 complete (Careers Page)
+Plan: 2 of 2 in Phase 7 complete
+Status: Phase 7 complete — /careers page live, Zapier + Netlify setup guide ready for user to follow after deploy
+Last activity: 2026-03-25 — Phase 7 plan 02: CAREERS-ZAPIER-SETUP-GUIDE.md (Netlify email + Zapier Zap setup for careers form pipeline)
 
-Progress: [████████░░] 89% (plans with SUMMARY.md — 07-01 pending checkpoint)
+Progress: [█████████░] 95% (Phase 7 complete — 2/2 plans done)
 
 ## Performance Metrics
 
@@ -103,6 +103,8 @@ Recent decisions affecting current work:
 - [Phase 07-careers-page]: CareersForm uses form name 'careers' — keeps job applications separate from 'contact' Netlify Forms bucket
 - [Phase 07-careers-page]: TypeScript union widened to include HTMLSelectElement in validateField and querySelectorAll — required for select blur validation
 - [Phase 07-careers-page]: CareersHero Apply Now CTA links to #careers-form anchor (page-internal scroll, no Calendly JS dependency on /careers)
+- [Phase 07-careers-page]: Zapier trigger scoped to form name 'careers' (not 'All forms') — isolates job applications from contact submissions in both Netlify and Zapier
+- [Phase 07-careers-page]: 'Website Applications' tab must be created in recruitment Google Sheet BEFORE Zapier auth — Zapier reads worksheet list at connection time
 
 ### Pending Todos
 
@@ -116,6 +118,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-25T10:26:02Z
-Stopped at: Phase 7 plan 01 checkpoint:human-verify — /careers page built, awaiting user visual verification
-Resume file: .planning/phases/07-careers-page/07-01-SUMMARY.md
+Last session: 2026-03-25T10:32:00Z
+Stopped at: Phase 7 plan 02 complete — CAREERS-ZAPIER-SETUP-GUIDE.md created and committed
+Resume file: .planning/phases/07-careers-page/07-02-SUMMARY.md

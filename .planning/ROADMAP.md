@@ -126,11 +126,11 @@ Plans:
   3. Submitting the application sends an email notification to the internal hiring email address
   4. Submitting the application creates a new row in a separate Google Sheets tab (distinct from the client contact sheet) via Zapier
   5. A link to the Careers page is visible in site navigation or the footer
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: Build Careers page and job application form
-- [ ] 07-02: Wire job application form to email + Google Sheets pipeline (separate from contact form)
+- [ ] 07-01-PLAN.md — careersContent.ts data file, CareersHero, CareersForm (select field support, form name "careers"), careers.astro page, Footer "Join Our Team" link
+- [ ] 07-02-PLAN.md — CAREERS-ZAPIER-SETUP-GUIDE.md: Netlify email to recruitment@workwiser.io + Zapier to "Website Applications" Google Sheet tab
 
 ### Phase 8: SEO + Brand Polish
 **Goal**: Every page has correct SEO metadata and Open Graph tags, brand elements are applied consistently across the site, and the site looks production-ready for launch

@@ -111,10 +111,10 @@ Plans:
   2. All case study data lives in `src/data/caseStudies.ts` — adding a new case study requires only editing that file
   3. Page follows brand guidelines (navy/blue/teal palette, Open Sauce headers, consistent card layout) with no Canva mockup to reference
   4. A CTA at the bottom of the page links to Contact Us
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 06-01: Build caseStudies.ts data file and Case Studies listing page with brand-consistent card layout
+- [ ] 06-01-PLAN.md — Data file (caseStudies.ts), hero/grid/CTA components, and case-studies.astro page assembly
 
 ### Phase 7: Careers Page
 **Goal**: Prospective agents and VAs can find the job application page, understand it is separate from the client-facing site, and submit an application that reaches the hiring team via email and Google Sheets

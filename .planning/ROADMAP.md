@@ -19,7 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 5: Contact Us Page** - Contact form wired to email notification and Google Sheets via Netlify Forms + Zapier (completed 2026-03-23)
 - [x] **Phase 6: Case Studies Page** - Data-driven listing page built from caseStudies.ts following brand guidelines (completed 2026-03-25)
 - [x] **Phase 7: Careers Page** - Job application page with separate form pipeline to hiring email and Google Sheets (completed 2026-03-25)
-- [ ] **Phase 8: SEO + Brand Polish** - Meta tags, Open Graph, favicon, and brand consistency audit across all pages
+- [x] **Phase 8: SEO + Brand Polish** - Meta tags, Open Graph, favicon, and brand consistency audit across all pages (completed 2026-03-25)
 - [ ] **Phase 9: Launch** - Full pre-launch review, DNS cutover to Netlify, SSL verification, WordPress fallback in place
 
 ## Phase Details
@@ -145,8 +145,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 08-01-PLAN.md — Open Graph tags, Twitter Card meta, canonical links in BaseLayout + real W-arrow favicon
-- [ ] 08-02-PLAN.md — Brand consistency audit: logo usage (SEO-03), yellow accents, gradients, dot grids, W-arrow watermarks (SEO-04)
+- [x] 08-01-PLAN.md — Open Graph tags, Twitter Card meta, canonical links in BaseLayout + real W-arrow favicon
+- [x] 08-02-PLAN.md — Brand consistency audit: logo usage (SEO-03), yellow accents, gradients, dot grids, W-arrow watermarks (SEO-04)
 
 ### Phase 9: Launch
 **Goal**: The new WorkWiser site is live at workwiser.io with SSL active, DNS cutover completed safely with the WordPress site intact as a fallback
@@ -180,5 +180,5 @@ Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independen
 | 5. Contact Us | 2/2 | Complete   | 2026-03-23 |
 | 6. Case Studies | 1/1 | Complete   | 2026-03-25 |
 | 7. Careers | 2/2 | Complete | 2026-03-25 |
-| 8. SEO + Brand Polish | 0/2 | Not started | - |
+| 8. SEO + Brand Polish | 2/2 | Complete | 2026-03-25 |
 | 9. Launch | 0/2 | Not started | - |

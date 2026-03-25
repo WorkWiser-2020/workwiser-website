@@ -129,7 +129,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 07-01-PLAN.md — careersContent.ts data file, CareersHero, CareersForm (select field support, form name "careers"), careers.astro page, Footer "Join Our Team" link
+- [x] 07-01-PLAN.md — careersContent.ts data file, CareersHero, CareersForm (select field support, form name "careers"), careers.astro page, Footer "Join Our Team" link
 - [ ] 07-02-PLAN.md — CAREERS-ZAPIER-SETUP-GUIDE.md: Netlify email to recruitment@workwiser.io + Zapier to "Website Applications" Google Sheet tab
 
 ### Phase 8: SEO + Brand Polish
@@ -179,6 +179,6 @@ Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independen
 | 4. About Us + Why Us | 2/2 | Complete   | 2026-03-23 |
 | 5. Contact Us | 2/2 | Complete   | 2026-03-23 |
 | 6. Case Studies | 1/1 | Complete   | 2026-03-25 |
-| 7. Careers | 0/2 | Not started | - |
+| 7. Careers | 1/2 | In progress | - |
 | 8. SEO + Brand Polish | 0/2 | Not started | - |
 | 9. Launch | 0/2 | Not started | - |

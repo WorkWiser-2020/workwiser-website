@@ -38,6 +38,31 @@ const {
     <Font cssVariable="--font-open-sauce-one" preload />
     <Font cssVariable="--font-inter" preload />
     <slot name="head" />
+    <!-- Organization schema markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "WorkWiser",
+      "url": "https://workwiser.io",
+      "logo": "https://workwiser.io/images/logo-full.svg",
+      "description": "WorkWiser connects US businesses with skilled nearshore virtual assistants from Latin America. Simplified hiring, IRS compliance, bilingual talent, and full contract management.",
+      "telephone": "+13022575427",
+      "email": "info@workwiser.io",
+      "sameAs": [
+        "https://www.linkedin.com/company/workwiser-io/",
+        "https://www.facebook.com/share/1BMtBrehBK/",
+        "https://www.instagram.com/workwiser_"
+      ],
+      "serviceType": [
+        "Virtual Assistant Services",
+        "Nearshore Staffing",
+        "Customer Support Outsourcing",
+        "Healthcare Virtual Assistants",
+        "Real Estate Virtual Assistants"
+      ]
+    }
+    </script>
   </head>
   <body class="font-body text-navy">
     <Header />

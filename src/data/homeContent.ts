@@ -133,31 +133,31 @@ export const processSteps: ProcessStep[] = [
     step: 1,
     title: 'Understanding Your Needs',
     description:
-      'Tell us what support you\'re looking for and we\'ll ensure we meet your exact requirements.',
+      'We start with a discovery call to learn your business, workflows, and the exact support you need — so we match you with the right professional from day one.',
   },
   {
     step: 2,
     title: 'Pre-Qualified Candidates',
     description:
-      'Tell us what support you\'re looking for and we\'ll ensure we meet your exact requirements.',
+      'We tap into our vetted pool of Latin American professionals and hand-select candidates that match your role requirements, schedule, and communication style.',
   },
   {
     step: 3,
     title: 'Client Selection',
     description:
-      'Tell us what support you\'re looking for and we\'ll ensure we meet your exact requirements.',
+      'You interview and choose your preferred candidate. We facilitate structured introductions so you can make a confident decision with no pressure.',
   },
   {
     step: 4,
     title: 'Quick Onboarding',
     description:
-      'Tell us what support you\'re looking for and we\'ll ensure we meet your exact requirements.',
+      'Your new team member is up and running in days — not weeks. We handle contracts, IRS compliance, payroll setup, and initial training on your behalf.',
   },
   {
     step: 5,
     title: 'Boost Productivity',
     description:
-      'Tell us what support you\'re looking for and we\'ll ensure we meet your exact requirements.',
+      'With your VA fully integrated into your team, you reclaim your time and focus on growth. We provide ongoing support to ensure the relationship stays strong.',
   },
 ];
 
@@ -176,26 +176,26 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'Success doesn\'t mean leaving home. Embrace your culture, traditions, and home-cooked meals while thriving professionally.',
-    name: 'Name Last',
-    title: 'Healthcare',
-    initials: 'NL',
+      'WorkWiser transformed our patient scheduling process. Our VA handles over 200 appointments a week, freeing our nurses to focus entirely on patient care. The onboarding was seamless.',
+    name: 'Client Name',
+    title: 'Healthcare Practice Owner',
+    initials: 'CN',
     image: '/images/testimonial-1.jpg',
   },
   {
     quote:
-      'Success doesn\'t mean leaving home. Embrace your culture, traditions, and home-cooked meals while thriving professionally.',
-    name: 'Name Last',
-    title: 'Real Estate',
-    initials: 'NL',
+      'Within two weeks my WorkWiser VA was managing all my listings, client follow-ups, and transaction paperwork. I\'ve been able to focus on closing deals instead of admin work.',
+    name: 'Client Name',
+    title: 'Real Estate Broker',
+    initials: 'CN',
     image: '/images/testimonial-2.jpg',
   },
   {
     quote:
-      'Success doesn\'t mean leaving home. Embrace your culture, traditions, and home-cooked meals while thriving professionally.',
-    name: 'Name Last',
-    title: 'Technology',
-    initials: 'NL',
+      'Finding bilingual tech support talent used to take us months. WorkWiser placed a qualified specialist in 10 days who hit the ground running and immediately reduced our ticket backlog.',
+    name: 'Client Name',
+    title: 'Tech Company CEO',
+    initials: 'CN',
     image: '/images/testimonial-3.jpg',
   },
 ];

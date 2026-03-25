@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Home Page** - Full home page with all sections: hero, stats, services, value props, process, testimonials (completed 2026-03-20)
 - [x] **Phase 4: About Us + Why Us Pages** - Both Canva-designed pages built from brand guidelines and mockups (completed 2026-03-23)
 - [x] **Phase 5: Contact Us Page** - Contact form wired to email notification and Google Sheets via Netlify Forms + Zapier (completed 2026-03-23)
-- [ ] **Phase 6: Case Studies Page** - Data-driven listing page built from caseStudies.ts following brand guidelines
+- [x] **Phase 6: Case Studies Page** - Data-driven listing page built from caseStudies.ts following brand guidelines (completed 2026-03-25)
 - [ ] **Phase 7: Careers Page** - Job application page with separate form pipeline to hiring email and Google Sheets
 - [ ] **Phase 8: SEO + Brand Polish** - Meta tags, Open Graph, favicon, and brand consistency audit across all pages
 - [ ] **Phase 9: Launch** - Full pre-launch review, DNS cutover to Netlify, SSL verification, WordPress fallback in place
@@ -178,7 +178,7 @@ Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independen
 | 3. Home Page | 2/2 | Complete    | 2026-03-20 |
 | 4. About Us + Why Us | 2/2 | Complete   | 2026-03-23 |
 | 5. Contact Us | 2/2 | Complete   | 2026-03-23 |
-| 6. Case Studies | 0/1 | Not started | - |
+| 6. Case Studies | 1/1 | Complete   | 2026-03-25 |
 | 7. Careers | 0/2 | Not started | - |
 | 8. SEO + Brand Polish | 0/2 | Not started | - |
 | 9. Launch | 0/2 | Not started | - |

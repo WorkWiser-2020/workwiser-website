@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 6 context gathered
-last_updated: "2026-03-25T09:01:51.042Z"
+stopped_at: Completed 06-case-studies-page 06-01-PLAN.md
+last_updated: "2026-03-25T09:21:05.211Z"
 last_activity: "2026-03-23 — Phase 5 plan 02: Netlify Forms AJAX contact form + contact page + Zapier guide"
 progress:
   total_phases: 9
-  completed_phases: 5
-  total_plans: 9
-  completed_plans: 9
+  completed_phases: 6
+  total_plans: 10
+  completed_plans: 10
   percent: 89
 ---
 
@@ -59,6 +59,7 @@ Progress: [████████░░] 89% (plans with SUMMARY.md)
 | Phase 04-about-us-why-us-pages P02 | 2 | 2 tasks | 6 files |
 | Phase 05-contact-us-page P01 | 2 | 2 tasks | 4 files |
 | Phase 05-contact-us-page P02 | 30 | 2 tasks | 4 files |
+| Phase 06-case-studies-page P01 | 3 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -96,6 +97,9 @@ Recent decisions affecting current work:
 - [Phase 05-contact-us-page]: BaseLayout head slot placed before </head> for Calendly widget.js injection on contact page only
 - [Phase 05-contact-us-page]: Netlify Forms FormData cast via 'as unknown as Record<string, string>' to URLSearchParams — required for TypeScript strict mode build
 - [Phase 05-contact-us-page]: Hero CTA uses Calendly popup (Calendly.initPopupWidget) instead of direct link — matches sidebar book-a-call button for consistent UX
+- [Phase 06-case-studies-page]: Created CaseStudiesCta.astro instead of reusing CtaBanner — CtaBanner hardcoded with photo, pricing, and Calendly JS; new slim component links to /contact per CASE-04
+- [Phase 06-case-studies-page]: No nav link added to Header — deferred to Phase 7 Brand and SEO per CONTEXT.md
+- [Phase 06-case-studies-page]: outcomeStat rendered as text-3xl font-heading font-bold text-teal for visual prominence per CASE-02
 
 ### Pending Todos
 
@@ -109,6 +113,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-25T09:01:51.038Z
-Stopped at: Phase 6 context gathered
-Resume file: .planning/phases/06-case-studies-page/06-CONTEXT.md
+Last session: 2026-03-25T09:21:05.208Z
+Stopped at: Completed 06-case-studies-page 06-01-PLAN.md
+Resume file: None

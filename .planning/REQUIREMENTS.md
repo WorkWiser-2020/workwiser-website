@@ -65,10 +65,10 @@
 
 *Note: No Canva design exists for this page — will be built following brand guidelines.*
 
-- [ ] **CASE-01**: Case studies listing page with cards — client name/industry, challenge, result summary
-- [ ] **CASE-02**: Each case study card shows: industry, role type, a key measurable outcome (e.g., "Saved 20 hours/week")
-- [ ] **CASE-03**: Case studies data stored in a TypeScript data file (src/data/caseStudies.ts) for easy updates via Claude
-- [ ] **CASE-04**: CTA at bottom of page linking to Contact Us
+- [x] **CASE-01**: Case studies listing page with cards — client name/industry, challenge, result summary
+- [x] **CASE-02**: Each case study card shows: industry, role type, a key measurable outcome (e.g., "Saved 20 hours/week")
+- [x] **CASE-03**: Case studies data stored in a TypeScript data file (src/data/caseStudies.ts) for easy updates via Claude
+- [x] **CASE-04**: CTA at bottom of page linking to Contact Us
 
 ### Careers / Job Application Page
 
@@ -174,10 +174,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-05 | Phase 5 — Contact Us | Complete |
 | CONT-06 | Phase 5 — Contact Us | Complete |
 | CONT-07 | Phase 5 — Contact Us | Complete |
-| CASE-01 | Phase 6 — Case Studies | Pending |
-| CASE-02 | Phase 6 — Case Studies | Pending |
-| CASE-03 | Phase 6 — Case Studies | Pending |
-| CASE-04 | Phase 6 — Case Studies | Pending |
+| CASE-01 | Phase 6 — Case Studies | Complete |
+| CASE-02 | Phase 6 — Case Studies | Complete |
+| CASE-03 | Phase 6 — Case Studies | Complete |
+| CASE-04 | Phase 6 — Case Studies | Complete |
 | CAREER-01 | Phase 7 — Careers | Pending |
 | CAREER-02 | Phase 7 — Careers | Pending |
 | CAREER-03 | Phase 7 — Careers | Pending |

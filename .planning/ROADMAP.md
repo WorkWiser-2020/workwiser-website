@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: About Us + Why Us Pages** - Both Canva-designed pages built from brand guidelines and mockups (completed 2026-03-23)
 - [x] **Phase 5: Contact Us Page** - Contact form wired to email notification and Google Sheets via Netlify Forms + Zapier (completed 2026-03-23)
 - [x] **Phase 6: Case Studies Page** - Data-driven listing page built from caseStudies.ts following brand guidelines (completed 2026-03-25)
-- [ ] **Phase 7: Careers Page** - Job application page with separate form pipeline to hiring email and Google Sheets
+- [x] **Phase 7: Careers Page** - Job application page with separate form pipeline to hiring email and Google Sheets (completed 2026-03-25)
 - [ ] **Phase 8: SEO + Brand Polish** - Meta tags, Open Graph, favicon, and brand consistency audit across all pages
 - [ ] **Phase 9: Launch** - Full pre-launch review, DNS cutover to Netlify, SSL verification, WordPress fallback in place
 
@@ -130,7 +130,7 @@ Plans:
 
 Plans:
 - [x] 07-01-PLAN.md — careersContent.ts data file, CareersHero, CareersForm (select field support, form name "careers"), careers.astro page, Footer "Join Our Team" link
-- [ ] 07-02-PLAN.md — CAREERS-ZAPIER-SETUP-GUIDE.md: Netlify email to recruitment@workwiser.io + Zapier to "Website Applications" Google Sheet tab
+- [x] 07-02-PLAN.md — CAREERS-ZAPIER-SETUP-GUIDE.md: Netlify email to recruitment@workwiser.io + Zapier to "Website Applications" Google Sheet tab
 
 ### Phase 8: SEO + Brand Polish
 **Goal**: Every page has correct SEO metadata and Open Graph tags, brand elements are applied consistently across the site, and the site looks production-ready for launch
@@ -179,6 +179,6 @@ Note: Phases 3, 4, and 5 all depend on Phase 2 (brand system) but are independen
 | 4. About Us + Why Us | 2/2 | Complete   | 2026-03-23 |
 | 5. Contact Us | 2/2 | Complete   | 2026-03-23 |
 | 6. Case Studies | 1/1 | Complete   | 2026-03-25 |
-| 7. Careers | 1/2 | In progress | - |
+| 7. Careers | 2/2 | Complete | 2026-03-25 |
 | 8. SEO + Brand Polish | 0/2 | Not started | - |
 | 9. Launch | 0/2 | Not started | - |
